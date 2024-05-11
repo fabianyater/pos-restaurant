@@ -1,0 +1,15 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/fabianyater/pos-config-repo.git
+          username: fabianyater
+          password: ${GITHUB_TOKEN}
+          default-label: main
